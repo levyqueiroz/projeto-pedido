@@ -1,73 +1,95 @@
 @charset "UTF-8";
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #ffd1dc, #ffe6f0);
-  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.container {
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #d8214f, #d63a61);
+  color: white;
   text-align: center;
-  padding: 50px 20px;
-  color: #b30059;
-  position: relative;
-  z-index: 1;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 2.5em;
+/* Tela inicial */
+#initialScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+
+#initialScreen h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.message {
-  font-size: 1.4em;
-  margin: 20px 0;
+#acceptButton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: white;
+  color: #d8214f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.photo {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+#acceptButton:hover {
+  background-color: #ffcad4;
+}
+
+/* Spotify */
+header {
+  width: 100%;
   margin-top: 20px;
 }
 
-.footer {
-  margin-top: 30px;
-  font-size: 1.2em;
+header iframe {
+  width: 100%;
+  height: 152px;
 }
 
-.hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Carrossel */
+main > #carousel {
+  width: 280px;
+  height: 498px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+}
+
+main > #carousel img {
   width: 100%;
   height: 100%;
-  z-index: 0;
-  pointer-events: none;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.heart {
-  position: absolute;
-  color: #ff3366;
-  font-size: 24px;
-  animation: float 6s infinite ease-in;
+/* Contador */
+footer {
+  margin-top: 40px;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(100vh) scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) scale(1.2);
-    opacity: 0;
-  }
+#timer {
+  font-size: 1.5em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
 }

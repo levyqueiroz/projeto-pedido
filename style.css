@@ -60,7 +60,7 @@ header {
 }
 
 header iframe {
-  width: 100%;
+  width: 60%;
   height: 152px;
 }
 
@@ -82,8 +82,8 @@ main > #carousel img {
 }
 
 /* Contador */
-footer {
-  margin-top: 40px;
+#contador {
+  margin-top: 30px;
 }
 
 #timer {

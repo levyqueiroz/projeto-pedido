@@ -126,7 +126,7 @@ document.querySelector('footer').appendChild(secretArea);
 // Evento para abrir a área secreta ao clicar 3x no contador
 timerDiv.addEventListener('click', () => {
   clickCount++;
-  if (clickCount >= 3) {
+  if (clickCount >= 10) {
     const savedDate = localStorage.getItem('startDate');
     if (savedDate) {
       const data = new Date(savedDate);

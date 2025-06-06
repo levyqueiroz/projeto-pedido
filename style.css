@@ -18,6 +18,11 @@ body {
   padding: 20px;
 }
 
+body::-webkit-scrollbar { 
+  display: none;
+
+}
+
 /* Tela inicial */
 #initialScreen {
   display: flex;
@@ -92,4 +97,8 @@ main > #carousel img {
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
+}
+
+.p {
+  margin-top: 10px;
 }

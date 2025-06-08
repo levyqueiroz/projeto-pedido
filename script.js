@@ -121,12 +121,13 @@ closeButton.style.color = '#000';
 secretArea.appendChild(acceptTimeDiv);
 secretArea.appendChild(resetButton);
 secretArea.appendChild(closeButton);
-document.querySelector('footer').appendChild(secretArea);
+document.body.appendChild(secretArea);
+
 
 // Evento para abrir a área secreta ao clicar 3x no contador
 timerDiv.addEventListener('click', () => {
   clickCount++;
-  if (clickCount >= 10) {
+  if (clickCount >= 3) {
     const savedDate = localStorage.getItem('startDate');
     if (savedDate) {
       const data = new Date(savedDate);
@@ -154,3 +155,4 @@ resetButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
   secretArea.style.display = 'none';
 });
+

@@ -72,8 +72,8 @@ header iframe {
 
 /* Carrossel */
 main > #carousel {
-  width: 250px;
-  height: 468px;
+  width: 200px;
+  height: 356px;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -113,7 +113,7 @@ main > #carousel img {
   position: fixed;
   top: -30px;
   font-size: 24px;
-  animation: fall linear infinite;
+  animation: fall linear;
   pointer-events: none;
   color: pink;
   z-index: 1000;
@@ -121,8 +121,8 @@ main > #carousel img {
 
 @keyframes fall {
   to {
-    transform: translateY(110vh);
-    opacity: 0;
+    transform: translateY(110vh); /* Faz o coração descer além do fim da tela */
   }
 }
+
 

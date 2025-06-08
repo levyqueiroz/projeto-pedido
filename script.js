@@ -164,19 +164,20 @@ function createHeart() {
   heart.classList.add('heart');
   heart.textContent = '❤️';
 
-  // Posição e animação aleatória
+  const duration = Math.random() * 2 + 3; // entre 3s e 5s
+
   heart.style.left = Math.random() * 100 + 'vw';
   heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
-  heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+  heart.style.animationDuration = duration + 's';
 
   document.body.appendChild(heart);
 
-  // Remover o coração após a animação
+  // Remove o coração após o tempo da animação
   setTimeout(() => {
     heart.remove();
-  }, 5000);
+  }, duration * 1000);
 }
 
-// Chover corações continuamente
-setInterval(createHeart, 1000); // Ajuste a velocidade aqui (ms)
+setInterval(createHeart, 1000);
+
 

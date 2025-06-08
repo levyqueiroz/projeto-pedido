@@ -156,3 +156,27 @@ closeButton.addEventListener('click', () => {
   secretArea.style.display = 'none';
 });
 
+
+// CORAÇÕES
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.textContent = '❤️';
+
+  // Posição e animação aleatória
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+  heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+  document.body.appendChild(heart);
+
+  // Remover o coração após a animação
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+// Chover corações continuamente
+setInterval(createHeart, 1000); // Ajuste a velocidade aqui (ms)
+

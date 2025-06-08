@@ -72,8 +72,8 @@ header iframe {
 
 /* Carrossel */
 main > #carousel {
-  width: 280px;
-  height: 498px;
+  width: 250px;
+  height: 468px;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -106,3 +106,23 @@ main > #carousel img {
 .p {
   margin-top: 15px;
 }
+
+/* CORAÇÕES */
+
+.heart {
+  position: fixed;
+  top: -30px;
+  font-size: 24px;
+  animation: fall linear infinite;
+  pointer-events: none;
+  color: pink;
+  z-index: 1000;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
